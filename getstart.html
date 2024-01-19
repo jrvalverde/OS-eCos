@@ -1,0 +1,162 @@
+<html><head><title>Downloading and Installation</title></head><body alink="red" bgcolor="white" link="#cc0000" text="black" vlink="#880000">
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%"><tbody><tr>
+<td align="center" bgcolor="#aaaaaa" valign="top" width="125">
+  <center>
+  <p>
+    <br><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>
+    <a href="http://ecos.sourceware.org/" target="_top">eCos Home</a><br><br>
+    <a href="http://ecos.sourceware.org/redboot/" target="_top">RedBoot Home</a><br>
+    </b></font>
+  </p>
+  <hr noshade="noshade" size="4" width="90%">
+  <p>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>
+    <a href="http://ecos.sourceware.org/about.html">About eCos</a><br><br>
+    <a href="http://ecos.sourceware.org/hardware.html">Supported Hardware</a><br><br>
+    <a href="http://ecos.sourceware.org/getstart.html">Downloading and Installation</a><br><br>
+    <a href="http://ecos.sourceware.org/docs.html">Documentation</a><br><br>
+    <a href="http://ecos.sourceware.org/fom/ecos">FAQ</a><br><br>
+    <a href="http://ecos.sourceware.org/intouch.html">Mailing lists</a><br><br>
+    <a href="http://ecos.sourceware.org/problemreport.html">Problems</a><br><br>
+    <a href="http://ecos.sourceware.org/license-overview.html">Licensing</a><br><br>
+    <a href="http://ecos.sourceware.org/anoncvs.html">Anonymous CVS</a><br><br>
+    <a href="http://ecos.sourceware.org/contrib.html">Contributions and Third Party Projects</a><br><br>
+    </b></font>
+  </p>
+  </center>
+</td>
+
+<td valign="top">
+
+<div>
+  <img src="getstart%20Files/ecos.gif" alt="eCos" border="0" height="63" width="200">
+</div>
+
+
+
+
+<h1>Downloading and Installation</h1>
+<hr noshade="noshade" size="3">
+
+<p> These instructions describe how to download and install eCos
+version 2.0. This version was released on 20th May, 2003 and has
+remained frozen since then. If you wish to use a more recent version
+of eCos please consider using <a href="http://ecos.sourceware.org/anoncvs.html">Anonymous CVS</a>
+to get the latest and greatest, however less well tested version of
+eCos. Installing the host support tools as described here is
+recommended when using anonymous CVS.</p>
+
+<h2>Host support</h2>
+
+<p>The eCos net distribution is available in both Linux
+and Windows versions. The Linux version is tested under recent
+versions of the Red Hat, SuSE and Debian distributions for x86 and should work
+under most Linux variants. The Windows version has been tested under
+Microsoft Windows NT4.0 + SP6a, Windows 2000 Professional and Windows XP. Please
+note that eCos is no longer tested under Windows 95/98/ME. Building and using
+the eCos GNU cross toolchains under Windows 95/98/ME has been found to be
+unreliable. We recommend that users avoid building the development tools on
+these systems if possible.</p>
+
+<h2>Downloading and installation instructions</h2>
+
+<h3>Cygwin</h3>
+
+<p>Developers wishing to install eCos on a <i>Windows</i> host must first install a recent
+version of the <a href="http://www.cygwin.com/">Cygwin</a> UNIX emulation system.
+Full instructions on <a href="http://ecos.sourceware.org/cygwin.html">installing Cygwin for
+use with eCos</a> are available. The following instructions assume that Cygwin has
+already been installed (where necessary) and that the reader is familiar with invoking a
+<i>bash</i> shell.</p>
+
+<p>Note: If you have problems with the configuration tool, it may be
+necessary to use the eCosCentric unsupported snapshot which can be
+found on their 
+<a href="http://www.ecoscentric.com/devzone/configtool.shtml">DevZone</a> 
+page</p>
+
+<h3>Toolchain</h3>
+
+<p>The eCos 2.0 release features an installation tool which simplifies the downloading
+and installation of the eCos sources, host tools and documentation.
+The installation tool can optionally download one or more pre-built GNU cross toolchains
+(contributed by <a href="http://www.ecoscentric.com/">eCosCentric Limited</a>)
+for use in conjunction with eCos. At present, toolchains for the following target
+architectures are available for download in pre-built form:</p>
+
+<center><table border="0" cellpadding="7" cellspacing="2">
+<tbody><tr bgcolor="#999999"><td><b>Architecture</b></td><td><b><tt>TARGET</tt></b></td></tr>
+<tr bgcolor="#dddddd"><td>ARM (including StrongARM, XScale)</td><td><tt>arm-elf</tt></td></tr>
+<tr bgcolor="#dddddd"><td>Intel x86</td><td><tt>i386-elf</tt></td></tr>
+<tr bgcolor="#dddddd"><td>MIPS32</td><td><tt>mipsisa32-elf</tt></td></tr>
+<tr bgcolor="#dddddd"><td>PowerPC</td><td><tt>powerpc-eabi</tt></td></tr>
+<tr bgcolor="#dddddd"><td>Renesas SuperH</td><td><tt>sh-elf</tt></td></tr>
+</tbody></table></center>
+
+<p>Developers targetting one of the other architectures must build a toolchain
+themselves at present. Full instructions for downloading source code and
+<a href="http://ecos.sourceware.org/build-toolchain.html">building a toolchain</a> are available.</p>
+
+<h3>eCos</h3>
+
+<p>We recommend that eCos is installed to <tt>/opt/ecos</tt> where it will be
+accessible by all users. This may require installation by a user with suitable
+privileges. First, download the eCos installation tool by using the following
+command at a <i>bash</i> prompt:</p>
+
+<ul><tt>
+<nobr>wget --passive-ftp ftp://ecos.sourceware.org/pub/ecos/ecos-install.tcl</nobr>
+</tt></ul>
+
+<p>The installation tool may then be invoked as follows:</p>
+
+<ul><tt>
+<nobr>sh ecos-install.tcl</nobr>
+</tt></ul>
+
+<p>The installation tool will first present a list of <a href="http://ecos.sourceware.org/mirror.html">mirror sites</a>
+from which the software may be downloaded. For best results, please select a
+mirror site in your own geographical region. The tool will then prompt for an
+installation location. We recommend installation to <tt>/opt/ecos</tt> where the
+software will be accessible by all users. Finally, the tool will present a list
+of pre-built GNU toolchains available for download. Select each toolchain you wish
+to download by entering the corresponding number. When all required toolchains have
+been selected, enter <tt>q</tt>. Downloading and installation of the software will
+then commence.</p>
+
+<p>Windows users should note that POSIX-style paths are relative to the root of their
+Cygwin installation (typically <tt>c:\cygwin</tt>) by default. For example,
+<tt>/opt/ecos</tt> might be located at <tt>c:\cygwin\opt\ecos</tt> in the Windows Explorer.</p>
+
+<p>Users may wish to create a shortcut to the eCos Configuration Tool on their desktop. Typically,
+this may be achieved by dragging the <tt>configtool</tt> or <tt>configtool.exe</tt> executable file
+from the file manager provided by your operating system onto the desktop. This file is located
+in the <tt>ecos-2.0/tools/bin</tt> directory under the location at which eCos was installed.</p>
+
+<h2>Documentation</h2>
+
+<p>Full documentation is available <a href="http://ecos.sourceware.org/docs.html">online</a>.
+It is included within the eCos net distribution in HTML format only. The
+documentation may also be downloaded separately in multiple archive formats:
+
+</p><ul>
+<li><a href="ftp://ecos.sourceware.org/pub/ecos/releases/ecos-2.0/eCosDoc20.zip">eCos 2.0 documentation</a> (eCosDoc20.zip - 1.9MB)
+</li><li><a href="ftp://ecos.sourceware.org/pub/ecos/releases/ecos-2.0/ecos-2.0-doc.tar.bz2">eCos 2.0 documentation</a> (ecos-2.0-doc.tar.bz2 -  908kB)
+</li></ul><p></p>
+
+<p>New users are encouraged to follow the programming
+tutorial in the appropriate <i>Getting Started with eCos</i> document
+which guides the reader through the stages involved in
+building and running an eCos application.</p>
+
+<h2>Previous releases</h2>
+
+<p>Previous public releases of eCos remain available for <a href="ftp://ecos.sourceware.org/pub/ecos/README">downloading</a>. Users of eCos 1.3.1 may refer to the eCos 1.3.1
+installation instructions for <a href="http://ecos.sourceware.org/install-linux-131.html">Linux</a> and <a href="http://ecos.sourceware.org/install-windows-131.html">Windows</a>.</p>
+
+</td>
+</tr>
+</tbody></table>
+
+</body></html>

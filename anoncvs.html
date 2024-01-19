@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head><title>Anonymous CVS access</title></head><body alink="red" bgcolor="white" link="#cc0000" text="black" vlink="#880000">
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%"><tbody><tr>
+<td align="center" bgcolor="#aaaaaa" valign="top" width="125">
+  <center>
+  <p>
+    <br><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>
+    <a href="http://ecos.sourceware.org/" target="_top">eCos Home</a><br><br>
+    <a href="http://ecos.sourceware.org/redboot/" target="_top">RedBoot Home</a><br>
+    </b></font>
+  </p>
+  <hr noshade="noshade" size="4" width="90%">
+  <p>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>
+    <a href="http://ecos.sourceware.org/about.html">About eCos</a><br><br>
+    <a href="http://ecos.sourceware.org/hardware.html">Supported Hardware</a><br><br>
+    <a href="http://ecos.sourceware.org/getstart.html">Downloading and Installation</a><br><br>
+    <a href="http://ecos.sourceware.org/docs.html">Documentation</a><br><br>
+    <a href="http://ecos.sourceware.org/fom/ecos">FAQ</a><br><br>
+    <a href="http://ecos.sourceware.org/intouch.html">Mailing lists</a><br><br>
+    <a href="http://ecos.sourceware.org/problemreport.html">Problems</a><br><br>
+    <a href="http://ecos.sourceware.org/license-overview.html">Licensing</a><br><br>
+    <a href="http://ecos.sourceware.org/anoncvs.html">Anonymous CVS</a><br><br>
+    <a href="http://ecos.sourceware.org/contrib.html">Contributions and Third Party Projects</a><br><br>
+    </b></font>
+  </p>
+  </center>
+</td>
+
+<td valign="top">
+
+<div>
+  <img src="anoncvs%20Files/ecos.gif" alt="eCos" border="0" height="63" width="200">
+</div>
+
+
+
+
+<h1>Anonymous CVS Access</h1>
+<hr noshade="noshade" size="3">
+
+<h2>Introduction</h2>
+
+<p>The most recent versions of eCos and RedBoot may be obtained using anonymous CVS access.
+This facility provides immediate access to the <a href="http://ecos.sourceware.org/cgi-bin/cvsweb.cgi/%7Echeckout%7E/ecos/packages/NEWS?content-type=text/plain&amp;cvsroot=ecos">latest eCos and RedBoot
+features</a> and the rapid deployment of any necessary bug fixes.</p>
+
+<p>For those unfamiliar with CVS, the following resources may be of use:
+</p><ul>
+  <li>
+    <a href="http://www.cvshome.org/" target="_top">CVShome.org</a> has CVS
+    clients available for download. Other information and links to books
+    on the subject can also be found at this site.
+  </li>
+  <li>
+    A good starting point is the
+    <a href="http://www.cvshome.org/docs/blandy.html" target="_top">
+    Introduction to CVS</a> by Jim Blandy.
+  </li>
+  <li>
+    The CVS sources come with <i>texinfo</i> documentation which is also
+    available in <a href="http://www.loria.fr/%7Emolli/cvs/doc/cvs_toc.html" target="_top"> HTML format</a>.
+  </li>
+</ul>
+We also provide a simple but effective way to
+<a href="http://ecos.sourceware.org/cgi-bin/cvsweb.cgi/?cvsroot=ecos">view the CVS repository</a>
+over the web using CVSweb. You can inspect the contents, history and
+differences between versions of all files in the repository in this way.<p></p>
+
+<h2>eCos 2.0</h2>
+
+<p>The eCos v2.0 code base is now available via
+anonymous CVS. eCos v2.0 includes a change to the licence from
+the old Red Hat eCos Public Licence (RHEPL) to the GNU General Public License (GPL)
+with a modification that makes it more suitable for embedded systems. Further
+details of the license change are available in our <a href="http://ecos.sourceware.org/license-overview.html">
+licence overview</a>.
+To retrieve the last revision that was licensed under the RHEPL, you
+need to use the <tt>last-rhepl</tt> CVS tag in your CVS checkout as
+described below.</p>
+
+<h2>The CVS source repository</h2>
+
+<p>The anonymous CVS repository contains the latest changes to the
+eCos sources and is updated as necessary by the eCos maintainers. However,
+users should note that these updates have not been rigorously tested and
+cannot be guaranteed to build or function correctly. It is therefore
+recommended that new developers work with the v2.0 release of eCos
+and RedBoot currently. The repository should be used in situations where
+you need access to new features, bug fixes, or are working on a shared
+contributed project.</p>
+
+<p>The anonymous CVS repository includes as much source code as we are able to
+publicize. However, there may be new architectural ports,
+board ports, or areas of functionality which cannot be made available in this
+way for commercial or contractual reasons.</p>
+
+<p>The relevant host side build tools may be obtained by FTP from this site and are not provided by anonymous CVS.
+Any patches or changes required to enable the use of these tools
+with the latest version of eCos in the repository will be publicized.
+If any updates to the eCos Configuration Tool are required, we
+will put up a new binary as soon as possible. You should ensure that you use the latest version of
+the Configuration Tool from the most recent net release of eCos when
+working with the sources from the anonymous CVS repository.</p>
+
+<h2>Accessing the repository</h2>
+
+<p>Before you can access the CVS repository, you must have a CVS client (see
+above) and direct TCP/IP access. If you are behind a firewall, you should
+discuss access with your local systems administrator.</p>
+
+<p>If you are using CVS v1.10 or earlier (use '<kbd>cvs -v</kbd>' to determine),
+you will first need to run the following command before you can access the
+repository the very first time:</p>
+<kbd>cvs -d :pserver:anoncvs@ecos.sourceware.org:/cvs/ecos login</kbd>
+<p>Any password is accepted.</p>
+
+<p>It is recommended that you use different directory trees for the
+anonymous CVS sources and for full releases of eCos. Create a new
+directory for the check out, change to that directory, and type:</p>
+
+<kbd>cvs -z3 -d :pserver:anoncvs@ecos.sourceware.org:/cvs/ecos co -P ecos</kbd>
+
+<p>This command should initiate a connection to the CVS server and check out
+the latest version of eCos, including TCP/IP networking stack and SNMP. For
+those who want the last version of eCos to be released under the RHEPL,
+instead type:</p>
+
+<kbd>cvs -z3 -d :pserver:anoncvs@ecos.sourceware.org:/cvs/ecos co -r last-rhepl -P ecos</kbd>
+
+<p>In the future, when you want to update your
+repository to the latest version, go to the base of the repository tree and
+use the command:</p>
+
+<kbd>cvs -z3 update -d -P</kbd>
+
+<p>or to update to the older RHEPL'd version of eCos:</p>
+
+<kbd>cvs -z3 update -r last-rhepl -d -P</kbd>
+
+<h2>Using the repository</h2>
+
+<p>Once the sources have been checked out, Unix users (or Windows users using
+the command line) can switch to it by setting the <tt>ECOS_REPOSITORY</tt>
+environment variable to the <tt>ecos/packages</tt> subdirectory of the
+checked out tree. For example:</p>
+
+<nobr>
+<kbd>ECOS_REPOSITORY=/ecoscvs/ecos/packages ; export ECOS_REPOSITORY</kbd> (for <i>sh</i>, <i>ksh</i> and <i>bash</i> users)<br>
+<kbd>setenv ECOS_REPOSITORY /ecoscvs/ecos/packages</kbd> (for <i>csh</i> and <i>tcsh</i> users)
+</nobr>
+
+<p>The current set of sources in the CVS repository requires recent versions
+of the host-side configuration tools for correct operation. The tools provided in
+eCos releases prior to the 2.0 beta release are not suitable.
+Users of the eCos Configuration Tool should select the new repository using
+the Build-&gt;Repository menu item.</p>
+
+<p>Use of a new repository with an old build tree is not recommended. Changes
+may have been made to the repository CDL files that will not be present in
+the working versions in your build tree.</p>
+
+<!--<p>To update the platforms list for the "Run Tests" feature, you will need
+to download and run
+<A HREF="ftp://ecos.sourceware.org/pub/ecos/anoncvs/eCos-011025.reg">this
+registry fragment</a>. Once downloaded, simply double click the file to install
+it.</p>
+-->
+
+<h2>Other notes</h2>
+
+<p>Anonymous CVS access to the repository is read-only. If
+you would like to contribute a change, bug fix or other improvement
+to eCos then you should start by discussing it on the
+<a href="http://ecos.sourceware.org/intouch.html">
+ecos-discuss</a> mailing list. If applicable, you may wish to post
+(or put up for FTP) the relevant diff or patch.</p>
+
+<p>You can obtain e-mail notifications when changes are made to the eCos
+repository. Refer to our <a href="http://ecos.sourceware.org/intouch.html">keeping in touch</a>
+page for further details.</p>
+
+<p>Since the anonymous CVS repository is copied from the master
+repository, the author field and log entries are not accurate.
+Use the ChangeLog files at the top of each package
+hierarchy to obtain history on the sources in that package.</p>
+
+<!--
+<p>David Airlie of Parthus Technologies plc. has <A
+HREF="../ml/ecos-discuss/2000-07/msg00070.html">announced</A> the
+availability of FTP snapshots. It is possible to obtain <A
+HREF="ftp://ftp.skynet.ie/cvs/" target="_top">complete snaphosts</A> and <A
+HREF="ftp://ftp.skynet.ie/cvs/ecos/" target="_top">individual files</A>. This
+service may be particularly useful for people unable to run CVS
+directly, for example because of corporate firewalls.</p>
+-->
+
+<p>eCosCentric Limited are providing a weekly CVS
+<a href="http://www.ecoscentric.com/devzone/snapshots.shtml">snapshot service</a>
+for those developers who are unable to access the anonymous CVS server due to
+firewall restrictions.</p>
+
+<!--
+<a href="docs-latest/">Updated documentation</a> is available, covering
+changes to eCos since the last official public release. Users of the
+anonymous CVS sources should refer to the updated documentation.
+-->
+
+<p>Queries and problems regarding use of the anonymous CVS service should
+be directed to the <a href="http://ecos.sourceware.org/intouch.html">
+ecos-discuss</a> mailing list. The eCos development team,
+including the anonymous CVS maintainer, read this list. Please clarify
+that the mail concerns an anonymous CVS problem in the subject field.</p>
+
+</td>
+</tr>
+</tbody></table>
+
+</body></html>

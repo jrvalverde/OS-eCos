@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head><title>eCos</title>
+
+
+  
+  <meta name="description" content="Information concerning the embedded Configurable operating system (eCos).">
+  <meta name="keywords" content="eCos, operating system, configurable, free, open-source, open source, portable, embedded, royalty free, royalty-free, real-time, real time, RTOS"></head><body alink="red" bgcolor="white" link="#cc0000" text="black" vlink="#880000">
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%"><tbody><tr>
+<td align="center" bgcolor="#aaaaaa" valign="top" width="125">
+  <center>
+  <p>
+    <br><font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>
+    <a href="http://ecos.sourceware.org/" target="_top">eCos Home</a><br><br>
+    <a href="http://ecos.sourceware.org/redboot/" target="_top">RedBoot Home</a><br>
+    </b></font>
+  </p>
+  <hr noshade="noshade" size="4" width="90%">
+  <p>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="-1"><b>
+    <a href="http://ecos.sourceware.org/about.html">About eCos</a><br><br>
+    <a href="http://ecos.sourceware.org/hardware.html">Supported Hardware</a><br><br>
+    <a href="http://ecos.sourceware.org/getstart.html">Downloading and Installation</a><br><br>
+    <a href="http://ecos.sourceware.org/docs.html">Documentation</a><br><br>
+    <a href="http://ecos.sourceware.org/fom/ecos">FAQ</a><br><br>
+    <a href="http://ecos.sourceware.org/intouch.html">Mailing lists</a><br><br>
+    <a href="http://ecos.sourceware.org/problemreport.html">Problems</a><br><br>
+    <a href="http://ecos.sourceware.org/license-overview.html">Licensing</a><br><br>
+    <a href="http://ecos.sourceware.org/anoncvs.html">Anonymous CVS</a><br><br>
+    <a href="http://ecos.sourceware.org/contrib.html">Contributions and Third Party Projects</a><br><br>
+    </b></font>
+  </p>
+  </center>
+</td>
+
+<td valign="top">
+
+<div>
+  <img src="eCos%20Files/ecos.gif" alt="eCos" border="0" height="63" width="200">
+</div>
+
+
+
+
+<h1>Home Page</h1>
+
+<hr noshade="noshade" size="3">
+
+<h2>Introduction</h2>
+
+<p>eCos is an open source, royalty-free, real-time operating system intended for
+embedded applications. The highly configurable nature of eCos allows the
+operating system to be customised to precise application requirements, delivering
+the best possible run-time performance and an optimised hardware resource
+footprint. A thriving net community has grown up around the operating system
+ensuring on-going technical innovation and wide platform support.</p>
+
+<p>For further information concerning eCos, please refer to the
+<a href="http://ecos.sourceware.org/about.html">about eCos</a> page. eCos is not related to the Linux
+operating system.</p>
+
+<h2>eCos news</h2>
+
+    <table cellpadding="5" width="100%">
+<tbody><tr><td valign="top" width="15%"><i>July 11, 2006</i></td>
+
+<td><b>Host tools</b>
+
+<p><a href="http://www.ecoscentric.com/">eCosCentric</a> has generated
+new unsupported snapshot builds of the eCos host tools that workaround
+an exception handling issue with Cygwin 1.5.19 and 1.5.20.
+<a href="http://www.ecoscentric.com/devzone/configtool.shtml">Download and installation instructions</a> are available.</p>
+</td></tr>
+
+<tr><td valign="top" width="15%"><i>April 20, 2005</i></td>
+
+<td><b>I<sup>2</sup>C infrastructure</b>
+
+<p><a href="http://www.ecoscentric.com/">eCosCentric</a>
+has contributed <a href="http://en.wikipedia.org/wiki/I%B2C">I<sup>2</sup>C</a>
+(Inter-Integrated Circuit) bus infrastructure from their eCosPro
+offering to eCos. The code and documentation are only available from
+the CVS repository at this time.</p>
+</td></tr>
+
+<tr><td valign="top" width="15%"><i>August 24, 2004</i></td>
+
+<td><b>SPI infrastructure</b>
+
+<p><a href="http://www.ecoscentric.com/">eCosCentric</a>
+has contributed <a href="http://wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">SPI</a>
+(Serial Peripheral Interface) bus infrastructure from their eCosPro
+offering to eCos. The code and documentation are only available from
+the CVS repository at this time.</p>
+</td></tr>
+
+<tr><td valign="top" width="15%"><i>April 14, 2004</i></td>
+
+<td><b>PPP stack</b>
+
+<p><a href="http://www.ecoscentric.com/">eCosCentric</a>
+has contributed a <a href="http://www.ecoscentric.com/devzone/ppp.shtml">PPP stack</a>
+based on FreeBSD source code. It is designed to be used in conjunction with the
+existing FreeBSD TCP/IP stack.</p>
+</td></tr>
+
+<tr><td valign="top" width="15%"><i>February 04, 2004</i></td>
+
+<td><b>eCos and RedBoot training course</b>
+
+<p><a href="http://www.ecoscentric.com/">eCosCentric</a>
+has announced a <a href="http://www.ecoscentric.com/train-pub.shtml">public
+eCos and RedBoot training course</a> which will be delivered on a periodic basis.
+The first course will be held in Cambridge, UK, April 19-22, 2004.</p>
+</td></tr>
+
+<tr><td valign="top" width="15%"><i>January 13, 2004</i></td>
+
+<td><b>Red Hat contributes eCos copyright to Free Software Foundation</b>
+
+<p><a href="http://www.redhat.com/">Red Hat</a> today <a href="http://www.redhat.com/about/presscenter/2004/press_eCosFSF.html">
+announced their intention</a> to transfer all their copyright in eCos to the <a href="http://www.fsf.org/">Free Software Foundation</a>. This will  consolidate the legal standing of eCos, and is a great benefit to the eCos community.</p>
+
+<p>As eCos transitions to becoming an FSF project, there will be a
+number of changes, especially to the copyright assignment process for
+new contributions among other things. Please bear with us during this
+transitional period as we make updates.</p>
+</td></tr>
+
+</tbody></table>
+
+<p>Earlier news items are available in the <a href="http://ecos.sourceware.org/news-archive.html">eCos news archive</a>.</p>
+
+</td>
+</tr>
+</tbody></table>
+
+</body></html>
